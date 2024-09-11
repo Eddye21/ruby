@@ -8,7 +8,7 @@ fetch("db/productos.json")
 .then(data => {
     data.forEach(producto => {
         let div = document.createElement('div')
-        div.innerHTML = `<h3> ${producto.nombre} </h3>
+        div.innerHTML = `<h3 id="${producto.id}"> ${producto.nombre} </h3>
                         <p> ${producto.precio} </p>`
         conteiner.appendChild(div)
     });
