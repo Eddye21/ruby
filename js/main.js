@@ -1,6 +1,8 @@
 
 let conteiner = document.querySelector('#test')
 
+console.log(conteiner)
+
 fetch("db/productos.json")
 .then(resultado => resultado.json())
 .then(data => {
@@ -8,7 +10,7 @@ fetch("db/productos.json")
         let div = document.createElement('div')
         div.innerHTML = `<h3> ${producto.nombre} </h3>
                         <p> ${producto.precio} </p>`
-        div.appendChild(conteiner)
+        conteiner.appendChild(div)
     });
 
 })
