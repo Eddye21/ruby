@@ -128,6 +128,14 @@ a.link{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 18rem;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-body{
