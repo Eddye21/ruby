@@ -1,0 +1,10 @@
+
+[
+    {"id": 1, "nombre": "Camiseta negra", "precio": 12.99},
+    {"id": 2, "nombre": "Camiseta nova", "precio": 19.99},
+    {"id": 3, "nombre": "Camiseta voleibol", "precio": 15.99},
+    {"id": 4, "nombre": "Jeans azul", "precio": 22.99},
+    {"id": 5, "nombre": "Jeans beige", "precio": 25.99},
+    {"id": 6, "nombre": "Vestido blanco", "precio": 15.99},
+    {"id": 7, "nombre": "Vestido flores", "precio": 17.99}
+]
