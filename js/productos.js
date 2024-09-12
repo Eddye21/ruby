@@ -11,8 +11,8 @@ function obtenerProductos() {
             console.log(producto.id)
                 const conteiner = conteiners[i]
                 const contenidoCard = document.createElement('div')
-                contenidoCard.className = "card"
-                contenidoCard.innerHTML = `<h3> ${producto.nombre} </h3>
+                contenidoCard.className = "card-text"
+                contenidoCard.innerHTML = `<h3 class= "name-product"> ${producto.nombre} </h3>
                                             <p> ${producto.precio} </p>
                                             <button id="${producto.id}" class="btn" > Agregar al carrito </button>`
             
