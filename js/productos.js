@@ -25,19 +25,21 @@ function obtenerProductos() {
                             let productosId = e.currentTarget.id
                             let seleccionId = datas.find(data => data.id == productosId)
                             carrito.push(seleccionId)
+                            
                             notificacionToast()
                             guardarCarrito()
                         }
                     })
-                }
-                function guardarCarrito(){
-                    localStorage.setItem("carProducts", JSON.stringify(carrito))
                 }
             agregarCarrito()
         })
     })
 }
 
+
+function guardarCarrito() {
+    localStorage.setItem("carProducts", JSON.stringify(carrito))
+}
 
 
 function notificacionToast() {
