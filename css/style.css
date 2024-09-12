@@ -93,6 +93,21 @@ a.link{
     font-size: 2rem;
 }
 
+.name-product-index{
+    padding-bottom:1.5rem;
+    font-size: 1.2rem;
+}
+
+.price{
+    font-size: 1.15rem;
+}
+
+.card-text-index{
+    text-align: center;
+    padding-top: 3rem;
+    margin: 1rem;
+}
+
 .text{
     padding-top: 3rem;
     padding-left: 1rem;
@@ -173,6 +188,29 @@ a.link{
     font-size: 1.4rem;
 }
 
+.products-conteiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-car{
+    margin: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.conteiner-carshop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteiner-img-trash{
+    margin-top: 3rem;
+    margin-right: 2rem;
+}
+
 .products-conteiner-car{
     margin: 2rem;
     border: 1px solid #706c6c;
@@ -191,7 +229,7 @@ a.link{
     height: 3rem;
     width: 16rem;
     margin-left: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 2rem;
     border-radius: 2rem;
 }
 
