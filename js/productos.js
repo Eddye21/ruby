@@ -39,6 +39,7 @@ function obtenerProductos() {
 
 function guardarCarrito() {
     localStorage.setItem("carProducts", JSON.stringify(carrito))
+    console.log(carrito)
 }
 
 

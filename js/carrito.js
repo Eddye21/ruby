@@ -1,17 +1,16 @@
 let carStorage = localStorage.getItem("carProducts")
 carStorage = JSON.parse(carStorage)
 
-console.table(carStorage)
+let carConteiner = document.querySelector(".products-conteiner-car")
 
-carStorage.forEach(product =>{
-    function renderCar() {
-        let carConteiner = document.getElementsByClassName("products-conteiner-car")
-    
-        let carItems = document.createElement("div")
+function renderCar(car) {     
+    car.forEach(product => {
+        const carItems = document.createElement("div")
         carItems.innerHTML =  `<h3> ${product.nombre} </h3>
                                 <p> ${product.precio} </p>`
-        carConteiner.appendChild(carItems)
-    }
-    renderCar()
-}) 
 
+        carConteiner.appendChild(carItems)
+    })
+}
+
+renderCar(carStorage)
