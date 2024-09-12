@@ -8,7 +8,7 @@ function renderCar(car) {
         const carItems = document.createElement("div")
         carItems.innerHTML =  `<h3> ${product.nombre} </h3>
                                 <p> ${product.precio} </p>`
-
+        
         carConteiner.appendChild(carItems)
     })
 }

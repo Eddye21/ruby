@@ -180,6 +180,16 @@ a.link{
     align-items: center;
 }
 
+.conteiner-carshop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteiner-img-trash{
+    margin-top: 3rem;
+    margin-right: 2rem;
+}
+
 .products-conteiner-car{
     margin: 2rem;
     border: 1px solid #706c6c;
