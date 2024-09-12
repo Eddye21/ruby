@@ -17,24 +17,26 @@ function obtenerProductos() {
                                             <button id="${producto.id}" class="btn" > Agregar al carrito </button>`
             
                 conteiner.appendChild(contenidoCard)
+                
+                function agregarCarrito() {
+                    let botonAgregar = document.querySelectorAll(".btn")
+                    botonAgregar.forEach((boton)=> {
+                    boton.onclick = (e) => {
+                        let productosId = e.currentTarget.id
+                        let seleccionId = datas.find(data => data.id == productosId)
+                        carrito.push(seleccionId)
+                        console.log(carrito)
+                        notificacionToast()
+                    }
+                })
+            }
             agregarCarrito()
         })
     })
 }
 
 
-function agregarCarrito() {
-        let botonAgregar = document.querySelectorAll(".btn")
-        botonAgregar.forEach((boton)=> {
-        boton.onclick = (e) => {
-            let productosId = e.currientTarget.id
-            let seleccionId = datas.find(data => data.id == productosId)
-            carrito.push(seleccionId)
-            console.log(carrito)
-            notificacionToast()
-        }
-    })
-}
+
 
 function notificacionToast() {
     Toastify({
