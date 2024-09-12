@@ -46,7 +46,7 @@ function guardarCarrito() {
 function notificacionToast() {
     Toastify({
         text: "Producto agregado con exito",
-        duration: 3000,
+        duration: 1000,
         style: {
             background: "rgb(0,176,155)",
         }

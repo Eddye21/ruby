@@ -180,6 +180,10 @@ a.link{
     align-items: center;
 }
 
+.text-car{
+    margin: 2rem;
+}
+
 .conteiner-carshop{
     display: flex;
     justify-content: space-between;
