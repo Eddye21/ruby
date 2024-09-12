@@ -1,12 +1,14 @@
+const carrito = []
+
 let conteiners = document.querySelectorAll(".card-body")
 function obtenerProductos() {
     fetch("../db/productos.json")
     .then(resultado => resultado.json())
-    .then(data => {
+    .then(datas => {
 
             
 
-        data.forEach((producto, i)=> {
+        datas.forEach((producto, i)=> {
                 const conteiner = conteiners[i]
                 const contenidoCard = document.createElement('div')
                 contenidoCard.className = "card-text"
@@ -24,7 +26,11 @@ function obtenerProductos() {
 function agregarCarrito() {
         let botonAgregar = document.querySelectorAll(".btn")
         botonAgregar.forEach((boton)=> {
-        boton.onclick = () => {
+        boton.onclick = (e) => {
+            let productosId = e.currientTarget.id
+            let seleccionId = datas.find(data => data.id == productosId)
+            carrito.push(seleccionId)
+            console.log(carrito)
             notificacionToast()
         }
     })
