@@ -124,8 +124,23 @@ a.link{
     transition: 0.8s;
 }
 
+.card-text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 2rem;
+}
+
 .products-cards{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18rem;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -133,8 +148,10 @@ a.link{
 .card-body{
     margin-top: 2rem;
     width: 18rem;
-    height: 30rem;
+    height: 37rem;
     border: 1px solid #ccc;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
 }
 
 .top-img{
@@ -146,6 +163,8 @@ a.link{
 .img-products{
     width: 20rem;
     height: 25rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
 .title-car, .title-billing{
@@ -160,6 +179,26 @@ a.link{
     height: 30rem;
 }
 
+.name-product{
+    margin-bottom: 0.5rem;
+}
+
+.btn{
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    color: #333;
+    font-size: 1rem;
+    height: 3rem;
+    width: 16rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 2rem;
+}
+
+.btn:hover{
+    background-color: #433939;
+    color: #ccc;
+}
 
 .buttons{
     align-items: center;
