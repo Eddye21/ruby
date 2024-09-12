@@ -21,20 +21,22 @@ function obtenerProductos() {
                 function agregarCarrito() {
                     let botonAgregar = document.querySelectorAll(".btn")
                     botonAgregar.forEach((boton)=> {
-                    boton.onclick = (e) => {
-                        let productosId = e.currentTarget.id
-                        let seleccionId = datas.find(data => data.id == productosId)
-                        carrito.push(seleccionId)
-                        console.log(carrito)
-                        notificacionToast()
-                    }
-                })
-            }
+                        boton.onclick = (e) => {
+                            let productosId = e.currentTarget.id
+                            let seleccionId = datas.find(data => data.id == productosId)
+                            carrito.push(seleccionId)
+                            notificacionToast()
+                            guardarCarrito()
+                        }
+                    })
+                }
+                function guardarCarrito(){
+                    localStorage.setItem("carProducts", JSON.stringify(carrito))
+                }
             agregarCarrito()
         })
     })
 }
-
 
 
 
