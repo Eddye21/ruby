@@ -1,8 +1,4 @@
-const conteiner = document.querySelectorAll(".text-card")
-
-// fetch('../db/productos.json')
-// .then(resultado => resultado.json())
-// .then(data => console.table(data))
+let conteiners = document.querySelectorAll(".text-card")
 
 function obtenerProductos() {
     fetch("../db/productos.json")
@@ -10,12 +6,13 @@ function obtenerProductos() {
     .then(data => {
 
         data.forEach(producto => {
-
-            const div = document.createElement('div')
-            div.innerHTML = `<h3 id="${producto.id}"> ${producto.nombre} </h3>
-                            <p> ${producto.precio} </p>`
+        conteiners.forEach(conteiner => {
+            const contenidoCard = document.createElement('div')
+            contenidoCard.innerHTML = `<h3> ${producto.nombre} </h3>
+                                        <p> ${producto.precio} </p>`
         
-            conteiner.appendChild(div)
+            conteiner.appendChild(contenidoCard)
+        })
         });
 
     })
