@@ -7,8 +7,15 @@ function renderCar(car) {
     car.forEach(product => {
         const carItems = document.createElement("div")
         carItems.className = "text-car"
-        carItems.innerHTML =  `<h3> ${product.nombre} </h3>
-                                <p> ${product.precio} </p>`
+        carItems.innerHTML =  `<div class="conteiner-text">
+                                    <h3> ${product.nombre} </h3>
+                                    <span> Precio: ${product.precio} </span>
+                                </div>
+                                <div class="conteiner-counter">
+                                    <p> Cantidad: <span class="counter"> 0 <span> </p>
+                                    <button class="plus">+</button>
+                                    <button class="minus">-</button>
+                                </div>`
 
         carConteiner.appendChild(carItems)
     })
