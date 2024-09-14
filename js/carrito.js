@@ -31,10 +31,10 @@ function renderCar(car) {
 
             add.forEach((addButton) => {
                 addButton.onclick = () => {
-                    alert("Press ok")
                     const cantidadActual = parseInt(cantidadSpan.textContent)
                     cantidadSpan.textContent = cantidadActual + 1
                     car[car.findIndex(p => p.id === product.id)].cantidad++
+                    console.log(car)
                     guardarCarrito()
                     // let productosId = e.currentTarget.id
                     // let seleccionId = car.find(product => product.id == productosId)
