@@ -14,8 +14,8 @@ function renderCar(car) {
                                     <span> Precio: ${product.precio} </span>
                                 </div>
                                 <div class="conteiner-counter">
-                                    <p> Cantidad: <span class="counter"> 0 <span> </p>
                                     <button class="plus">+</button>
+                                    <p> Cantidad: <span class="counter"> 0 <span> </p>
                                     <button class="minus">-</button>
                                 </div>`
 
