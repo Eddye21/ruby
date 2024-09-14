@@ -35,8 +35,8 @@ function renderCar(car) {
                     cantidadSpan.textContent = cantidadActual + 1
                     car[car.findIndex(p => p.id === product.id)].cantidad++
                     console.log(car)
-                    location.reload()
-                    actuslizarTotalCarrito()
+                    // location.reload()
+                    actualizarTotalCarrito()
                     guardarCarrito()
                     // let productosId = e.currentTarget.id
                     // let seleccionId = car.find(product => product.id == productosId)
@@ -55,16 +55,31 @@ function renderCar(car) {
             localStorage.setItem("carProducts", JSON.stringify(car))
         }
 
-        function actuslizarTotalCarrito() {
+        function actualizarTotalCarrito() {
             const total = car.reduce((total, producto) => {
                 const precio = parseFloat (producto.precio) || 0
                 const cantidad = producto.cantidad || 0
                 return total = precio * cantidad
             }, 0)
+            const elementoTotal = document.querySelector(".total-item")
+            elementoTotal.textContent = `$${total}`
+            localStorage.setItem("totalCarrito", total)
         }        
 
+        function mostrarTotal() {
+            const totalGuardado = local.getItem("totalCarrito")
+            if(totalGuardado){
+                const elementoTotal = document.querySelector(".total-item")
+                elementoTotal.parseInt = `${totalGuardado}`
+            }
+        }
+    
+        mostrarTotal()
+
     })
+
 }
+
 
 function vaciarCarrito() {
     let contenImg = document.querySelector(".delete-all")
@@ -73,6 +88,7 @@ function vaciarCarrito() {
             location.reload()
         }
 }
+
 
 
 vaciarCarrito()
