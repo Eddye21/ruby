@@ -150,7 +150,16 @@ a.link{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 18rem;
+    width: 20rem;
+}
+
+.conteiner-counter{
+    display: flex;
+    flex-direction: column;
+}
+
+.counter{
+    text-align: center;
 }
 
 .cards{
@@ -196,9 +205,24 @@ a.link{
 }
 
 .text-car{
-    margin: 2rem;
+    font-size: 0.9rem;
+    margin: 1rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.plus, .minus{
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+}
+
+.plus:hover{
+    background-color:  #d8f7b0 ;
+}
+
+.minus:hover{
+    background-color:  #f35d68;
+    border: 1px solid #ccc;
 }
 
 .conteiner-carshop{

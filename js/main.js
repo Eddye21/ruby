@@ -1,5 +1,5 @@
 
-let conteiners = document.querySelectorAll(".card-body")
+const conteiners = document.querySelectorAll(".card-body")
 
 function obtenerProductos() {
     fetch("db/productos.json")
