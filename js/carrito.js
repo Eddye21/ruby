@@ -18,8 +18,21 @@ function renderCar(car) {
                                 </div>`
 
         carConteiner.appendChild(carItems)
+
+        function botonAgregar () {
+            const add = document.querySelector(".plus")
+            add.onclik = () => {
+                
+            }
+        }
+
+        botonAgregar()
     })
 }
+
+
+
+
 
 function vaciarCarrito() {
     let contenImg = document.querySelector(".delete-all")

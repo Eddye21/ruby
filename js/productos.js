@@ -28,7 +28,7 @@ function obtenerProductos() {
                             
                             notificacionToast()
                             guardarCarrito()
-                        }
+                        }              
                     })
                 }
             agregarCarrito()
