@@ -14,24 +14,24 @@ function renderCar(car) {
                                 </div>
                                 <div class="conteiner-counter">
                                     <button class="plus">+</button>
-                                    <p> Cantidad: <span id="${product.cantidad || 1} " class="counter"> 0 <span> </p>
+                                    <p> Cantidad: <span class="counter"> ${product.cantidad || 1} <span> </p>
                                     <button class="minus">-</button>
                                 </div>`
                                 
 
         carConteiner.appendChild(carItems)
 
-        const cantidadSpan = document.querySelectorAll(".counter")
-
         botonAgregar()
-
 
         function botonAgregar () {
 
             const add = document.querySelectorAll(".plus")
 
+            const cantidadSpan = document.querySelectorAll(".counter")
+
             add.forEach((addButton) => {
                 addButton.onclick = () => {
+                    alert("Press ok")
                     const cantidadActual = parseInt(cantidadSpan.textContent)
                     cantidadSpan.textContent = cantidadActual + 1
                     car[car.findIndex(p => p.id === product.id)].cantidad++
@@ -52,6 +52,7 @@ function renderCar(car) {
         function guardarCarrito(){
             localStorage.setItem("carProducts", JSON.stringify(car))
         }
+
     })
 }
 
