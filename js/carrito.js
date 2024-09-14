@@ -35,6 +35,8 @@ function renderCar(car) {
                     cantidadSpan.textContent = cantidadActual + 1
                     car[car.findIndex(p => p.id === product.id)].cantidad++
                     console.log(car)
+                    location.reload()
+                    actuslizarTotalCarrito()
                     guardarCarrito()
                     // let productosId = e.currentTarget.id
                     // let seleccionId = car.find(product => product.id == productosId)
@@ -53,6 +55,14 @@ function renderCar(car) {
             localStorage.setItem("carProducts", JSON.stringify(car))
         }
 
+        function actuslizarTotalCarrito() {
+            const total = car.reduce((total, producto) => {
+                const precio = parseFloat (producto.precio) || 0
+                const cantidad = producto.cantidad || 0
+                return total = precio * cantidad
+            }, 0)
+        }        
+
     })
 }
 
@@ -62,8 +72,8 @@ function vaciarCarrito() {
             localStorage.clear()
             location.reload()
         }
-
 }
+
 
 vaciarCarrito()
 
