@@ -3,9 +3,6 @@ carStorage = JSON.parse(carStorage)
 
 let carConteiner = document.querySelector(".products-conteiner-car")
 
-const add = document.querySelectorAll(".plus")
-
-const carrito = []
 
 function renderCar(car) {     
     car.forEach(product => {
@@ -20,6 +17,7 @@ function renderCar(car) {
                                     <p> Cantidad: <span id="${product.cantidad || 1} " class="counter"> 0 <span> </p>
                                     <button class="minus">-</button>
                                 </div>`
+                                
 
         carConteiner.appendChild(carItems)
 
@@ -29,11 +27,15 @@ function renderCar(car) {
 
 
         function botonAgregar () {
+
+            const add = document.querySelectorAll(".plus")
+
             add.forEach((addButton) => {
                 addButton.onclick = () => {
                     const cantidadActual = parseInt(cantidadSpan.textContent)
                     cantidadSpan.textContent = cantidadActual + 1
-                    carrito
+                    car[car.findIndex(p => p.id === product.id)].cantidad++
+                    guardarCarrito()
                     // let productosId = e.currentTarget.id
                     // let seleccionId = car.find(product => product.id == productosId)
 
@@ -47,18 +49,11 @@ function renderCar(car) {
                 // } 
             })
         }
-
-        // function guardarCarrito(){
-        //     localStorage.setItem("carProducts", JSON.stringify(carrito))
-        //     console.log(carrito)
-        // }
+        function guardarCarrito(){
+            localStorage.setItem("carProducts", JSON.stringify(car))
+        }
     })
 }
-
-
-
-
-
 
 function vaciarCarrito() {
     let contenImg = document.querySelector(".delete-all")
