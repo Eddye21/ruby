@@ -211,7 +211,7 @@ a.link{
     margin-right: 2rem;
 }
 
-.products-conteiner-car{
+.products-conteiner-car, .section-text{
     margin: 2rem;
     border: 1px solid #706c6c;
     height: 30rem;
@@ -290,6 +290,21 @@ a.link{
     height: 2.5rem;
     color: #706c6c;
     font-size: 0.9rem;
+}
+
+.section-text{
+    background-color: #e6e0e0;
+    margin-top: 4rem;
+}
+
+.title-policity{
+    margin-top: 1rem;
+    text-align: center;
+    margin: 2rem;
+}
+
+.text-policity{
+    margin: 1rem ;
 }
 
 #pay-method{
