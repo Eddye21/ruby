@@ -1,9 +1,11 @@
 let carStorage = localStorage.getItem("carProducts")
 carStorage = JSON.parse(carStorage)
 
-const carrito = []
-
 let carConteiner = document.querySelector(".products-conteiner-car")
+
+const add = document.querySelectorAll(".plus")
+
+const carrito = []
 
 function renderCar(car) {     
     car.forEach(product => {
@@ -15,29 +17,41 @@ function renderCar(car) {
                                 </div>
                                 <div class="conteiner-counter">
                                     <button class="plus">+</button>
-                                    <p> Cantidad: <span class="counter"> 0 <span> </p>
+                                    <p> Cantidad: <span id="${product.cantidad || 1} " class="counter"> 0 <span> </p>
                                     <button class="minus">-</button>
                                 </div>`
 
         carConteiner.appendChild(carItems)
 
-        counter()
+        const cantidadSpan = document.querySelectorAll(".counter")
+
         botonAgregar()
 
+
         function botonAgregar () {
-            const add = document.querySelector(".plus")
-            add.onclik = () => {
-                const cantidadActual = parseInt(cantidadSpan.textContent)
-                cantidadSpan.textContent = cantidadActual + 1
-                carrito[carrito.findIndex(p => p.id === producto.id)].cantidad++
-                localStorage.setItem("carritoProductos", JSON.stringify(carrito))
-            } 
+            add.forEach((addButton) => {
+                addButton.onclick = () => {
+                    const cantidadActual = parseInt(cantidadSpan.textContent)
+                    cantidadSpan.textContent = cantidadActual + 1
+                    carrito
+                    // let productosId = e.currentTarget.id
+                    // let seleccionId = car.find(product => product.id == productosId)
+
+                    // guardarCarrito()
+                }
+                // addButton.onclik = () => {
+                //     alert("press ok")
+                //     // let productosId = e.currentTarget.id
+                //     // let seleccionId = car.find(product => product.id == productosId)
+                //     // carrito.push(seleccionId)
+                // } 
+            })
         }
 
-        function counter () {
-            const contador = document.querySelector(".counter")
-            contador.parseInt = ""
-        }
+        // function guardarCarrito(){
+        //     localStorage.setItem("carProducts", JSON.stringify(carrito))
+        //     console.log(carrito)
+        // }
     })
 }
 
