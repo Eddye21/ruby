@@ -36,7 +36,7 @@ function renderCar(car) {
 
         function counter () {
             const contador = document.querySelector(".counter")
-            console.log(contador)
+            contador.parseInt = ""
         }
     })
 }
